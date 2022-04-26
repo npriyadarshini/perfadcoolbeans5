@@ -31,20 +31,18 @@
       a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
   // Insert Twitter Pixel ID and Standard Event data below
   twq('init','o89bk');
-  twq('use1pCookie');
+  // twq('use1pCookie');
   twq('track','PageView');
   </script>
-  ></head>
+  </head>
 <body>
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div>
   <h1>let's Shop from website 5 sign on</h1>
-  <textarea id="event-params" autofocus="true" rows="15" cols="70">
-{
+  <textarea id="event-params" autofocus="true" rows="15" cols="70">{
   "currency": "USD",
   "value": 5
-}
-    </textarea>
+}</textarea>
     <br />
     <p id="msg"></p>
     <button onclick="sendConversion()">Send Conversion</button>
@@ -52,14 +50,13 @@
     <a href="%PUBLIC_URL%/purchase">Purchase</a>
   </nav>
 </div>
-<!-- the following snippet need to be placed after a UWT/OneTag base code -->>
+<!-- the following snippet need to be placed after a UWT/OneTag base code -->
 <script>
 function sendConversion() {
   var textarea = document.querySelector("#event-params");
   var msg = document.querySelector("#msg");
   try {
-  	console.log(JSON.parse(textarea.value));
-    twq('event', 'o89bk', JSON.parse(textarea.innerText));
+    twq('event', 'o89bk', JSON.parse(textarea.value));
     msg.innerText = "Conversion Sent";
   } catch (e) {
     msg.innerText = e.message;

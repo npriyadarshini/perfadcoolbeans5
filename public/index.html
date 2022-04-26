@@ -59,7 +59,7 @@ function sendConversion() {
   var msg = document.querySelector("#msg");
   try {
   	console.log(JSON.parse(textarea.value));
-    // twq('event', '[eventID]', JSON.parse(textarea.innerText));
+    twq('event', 'o89bk', JSON.parse(textarea.innerText));
     msg.innerText = "Conversion Sent";
   } catch (e) {
     msg.innerText = e.message;

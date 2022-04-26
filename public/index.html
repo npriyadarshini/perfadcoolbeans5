@@ -39,11 +39,11 @@
 <noscript>You need to enable JavaScript to run this app.</noscript>
 <div>
   <h1>let's Shop from website 5 sign on</h1>
-  <textarea id="event-params" autofocus="true" rows="10" cols="20">
-    {
-      "currency": "USD",
-      "value": 5
-    }
+  <textarea id="event-params" autofocus="true" rows="15" cols="70">
+{
+  "currency": "USD",
+  "value": 5
+}
     </textarea>
     <br />
     <p id="msg"></p>
@@ -52,6 +52,7 @@
     <a href="%PUBLIC_URL%/purchase">Purchase</a>
   </nav>
 </div>
+<!-- the following snippet need to be placed after a UWT/OneTag base code -->>
 <script>
 function sendConversion() {
   var textarea = document.querySelector("#event-params");
